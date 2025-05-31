@@ -1,20 +1,30 @@
 name,know_by_name,know_by_bio,know_by_name_description,know_by_bio_link,know_by_bio_summary,know_by_bio_summary_anonymized,know_by_bio_reasoning
-王鏊,yes,,"Wang Ao was a Chinese scholar and poet during the Ming dynasty, known for his contributions to literature and his role in the civil service.",,,,
-张永,no,,,,,,
-谷大用,no,,,,,,
-高凤,no,,,,,,
-杨一清,no,,,,,,
-张行成,no,,,,,,
-商輅,no,,,,,,
-刘琨,no,,,,,,
-段末波,no,,,,,,
-司马荂,no,,,,,,
-王鏊（明）,yes,,"Wang Ao was a Chinese scholar and politician during the Ming dynasty, known for his contributions to literature and governance in the 16th century.",,,,
-张永（明）,yes,,"Zhang Yong was a notable figure during the Ming Dynasty, known for his contributions to literature and governance.",,,,
-谷大用（明）,yes,,"谷大用 was a Chinese scholar and official during the Ming dynasty, known for his contributions to literature and governance.",,,,
-高凤（明）,yes,,"Gao Feng was a notable figure during the Ming Dynasty, known for his contributions to literature and poetry.",,,,
-杨一清（明）,yes,,"杨一清 was a Chinese politician and military leader during the Ming dynasty, known for his role in the defense against the Manchu invasions in the 17th century.",,,,
-商輅（明）,yes,,"商輅 was a Chinese painter and poet during the Ming dynasty, known for his landscape paintings and contributions to Chinese art.",,,,
-刘琨（东晋）,yes,,"刘琨 was a prominent general and politician during the Eastern Jin dynasty in China, known for his military prowess and contributions to the stability of the regime in the early 4th century.",,,,
-段末波（东晋）,yes,,"段末波 was a notable figure during the Eastern Jin dynasty in China, known for his contributions to literature and poetry.",,,,
-司马荂（西晋）,yes,,"司马荂 was a Chinese politician and military general during the Western Jin dynasty, known for his role in the consolidation of power for the Sima family.",,,,
+王鏊,yes,Wang Ao,"Wang Ao was a Chinese poet and scholar during the Ming dynasty, known for his contributions to literature and his role in the cultural developments of his time.",https://zh.wikipedia.org/wiki/%E7%8E%8B%E9%8F%8A,"王鏊（1450年—1524年），字濟之，號守溪，晚更號拙叟，学者称震泽先生，直隸蘇州府吳縣東洞庭山人，明朝正德、嘉靖年間重臣。官至戶部尚書、武英殿大學士，諡文恪。
+王鏊之父王琬於成化九年（1473年），年五十五歲始授湖廣光化縣知縣，成化十三年（1477年）三月棄官歸里。王鏊自幼隨父讀書，善寫文章，國子監諸生爭誦其文。成化十年（1474年）甲午科應天鄉試第一名舉人（解元），成化十一年（1475年）聯捷乙未科會試第一名，一甲第三名進士（探花）。王鏊殿試原擬第一，一說因對策指陳時弊，為執政所忌；一說時任大學士商輅（明朝當時唯一連中三元者）不欲讓他人儷己，故抑之。授翰林院編修，歷侍講、右春坊右諭德、詹事府少詹事兼侍讀學士。弘治十三年（1500年）七月升吏部右侍郎，仍兼侍讀學士，正德元年（1506年）升吏部左侍郎，仍兼侍讀學士，十月與吏部尚書焦芳一同入閣參政，十二月升戶部尚書、文淵閣大學士、同知經筵事，正德二年（1507年）八月加少傅兼太子太傅、武英殿大學士，戶部尚書仍舊。
+王鏊居官清廉，為人正直，時稱“天下窮閣老”。當時宦官劉瑾擅權，工部都水司郎中張瑋、雲南按察司副使姚祥、尚寶司卿顧璿被劉瑾荷杖幾死，王鏊怒斥劉瑾：“士可殺，不可辱。今辱且殺之，吾尚何顏居此。”與前戶部尚書韓文等上疏請誅劉瑾等“八黨”，不被採納，正德四年（1509年）四月致仕歸里，讀書著作，常與詩友遊山玩水，學者稱震澤先生。閒居十四年，嘉靖三年（1524年）卒，追贈太傅，諡文恪。
+致仕後，在蘇州學士街天官坊建有“怡老園”，清朝改作江蘇布政使司衙門。
+著有《詩文集》36卷、《奏疏》2卷、《守溪筆記》2卷、《震澤紀聞》2卷、《震澤長語》2卷、《震澤編》8卷、《姑蘇志》60卷、《春秋詞命》3卷、《本草單方》8卷，並參與纂修《明孝宗實錄》224卷。
+祖王伯英，祖王惟道，父王朝用，官光化知县，皆以子贵，赠如其官。曾祖妣陆氏、祖妣叶氏、妣叶氏，皆一品夫人。
+王鏊故里陸巷有惠和堂以及解元、會元、探花牌樓。其墓在東洞庭山梁家山。","Wang Ao (Year 1450 - Year 1524), courtesy name Ji Zhi, alias Shou Xi, later known as Zhuo Sou, was referred to by scholars as Mr. Zhen Ze. He was a prominent official during the reigns of the Ming Dynasty's Zhengde and Jiajing periods, hailing from the Eastern Dongting Mountain in the Suzhou region.
+
+Wang Ao's father, Wang Wan, began his career as the magistrate of Guanghua County in Huguang at the age of fifty-five in the Year 1473, and returned home in March of Year 1477. From a young age, Wang Ao studied under his father and excelled in writing, with students competing to recite his works. In Year 1474, he topped the local examination, and in Year 1475, he achieved first place in the national examination, ranking third among the top scholars. Although Wang Ao was originally expected to rank first in the palace examination, it is said that he was suppressed either due to his criticism of the current administration or because the then Grand Scholar, Shang Lu, did not want to share the spotlight.
+
+He was appointed as an editor in the Hanlin Academy and held various positions, including lecturer and vice minister of the Ministry of Rites. In July of Year 1500, he was promoted to the right vice minister of the Ministry of Personnel while still serving as a scholar. In Year 1506, he became the left vice minister of the Ministry of Personnel and continued as a scholar. In October, he entered the cabinet alongside the Minister of Personnel, Jiao Fang, and in December, he was promoted to Minister of Revenue and Grand Scholar, also overseeing the imperial lectures. In August of Year 1507, he was further appointed as a minor tutor and Grand Scholar, while retaining his position as Minister of Revenue.
+
+Wang Ao was known for his integrity and uprightness, earning the title ""The Old Man of the Poor Pavilion."" During the time when the eunuch Liu Jin held power, several officials were severely punished, and Wang Ao angrily rebuked Liu Jin, stating, ""A scholar can be killed, but not humiliated. Now, to humiliate and kill, how can I face this?"" Together with former Minister of Revenue Han Wen, he petitioned for the punishment of Liu Jin and his associates, but it was not accepted. In April of Year 1509, he retired and returned home to write and engage in poetry with friends, earning the title Mr. Zhen Ze among scholars. After fourteen years of leisure, he passed away in Year 1524 and was posthumously honored as a Grand Tutor.
+
+After retirement, he built the ""Yi Lao Garden"" in the Scholar Street of Suzhou, which was later transformed into the Jiangsu Provincial Government Office during the Qing Dynasty. 
+
+He authored a collection of works including 36 volumes of ""Poetry and Prose,"" 2 volumes of ""Memorials,"" 2 volumes of ""Shou Xi Notes,"" 2 volumes of ""Zhen Ze Chronicles,"" 2 volumes of ""Zhen Ze Long Speeches,"" 8 volumes of ""Zhen Ze Compilation,"" 60 volumes of ""Records of Gu Su,"" 3 volumes of ""Spring and Autumn Terms,"" and 8 volumes of ""Herbal Formulas,"" and participated in the compilation of the 224-volume ""Annals of the Ming Xiaozong.""
+
+His ancestors included Wang Bo Ying, Wang Wei Dao, and his father Wang Zhao Yong, who served as the magistrate of Guanghua, all of whom were honored posthumously. His great-grandmothers and grandmothers were all of high rank. 
+
+Wang Ao's hometown, Lu Xiang, features the Hui He Hall and the archways for top scholars. His tomb is located on Liangjia Mountain in Eastern Dongting.","The biography clearly states the individual's name as Wang Ao, detailing his life, achievements, and contributions during the Ming Dynasty. The specific dates, positions held, and his notable actions against the eunuch Liu Jin further confirm that this is indeed a historical figure named Wang Ao."
+张永,no,Zhang Yong,,https://zh.wikipedia.org/wiki/%E5%BC%A0%E6%B0%B8_(%E6%98%8E%E6%9C%9D%E5%AE%A6%E5%AE%98),"張永（1465年—1529年），保定人。明武宗時的司礼监太监。
+成化元年，出生。成化十一年，选入内廷。八虎之一，與劉瑾有怨懟，劉瑾打算將之黜發南京，於是兩人在皇帝面前對質。張永動手痛毆劉瑾，武宗令谷大用等置酒勸和。安化王朱寘鐇反叛，明武宗派楊一清總督寧夏、延綏，由張永任楊一清監軍。不久朱寘鐇被楊一清俘獲，張永趁獻俘時向武宗告發劉瑾罪狀，明武宗命令張永帶領禁軍捉拿劉瑾。最後劉瑾被殺。
+正德十四年（1519年），寧王朱宸濠謀反，明武宗親征，命張永率邊兵兩千人為前鋒。王守仁將朱宸濠俘虜，交付張永。江彬欲誣王守仁謀反，被張永救解得免。明世宗即位後，八虎受到打擊，御史萧淮彈劾谷大用、丘聚等人蛊惑先帝，並牽連張永。世宗下诏命张永闲住。萧淮又弹劾张永在江西有违法事，贬为奉御，前往孝陵主持香光。嘉靖五年，召还京师。嘉靖六年，为御用监掌印太监。嘉靖八年（1529年），大学士杨一清等說張永實有功，遂起用掌管御用监，提督团营。不久死去。
+[在维基数据编辑]","Zhang Yong (Year 1234 - Year 1298), a resident of Baoding. He was a eunuch in the court during the reign of Emperor Wu.
+
+Born in the first year of the Chenghua era. Selected to enter the inner court in the eleventh year of Chenghua. One of the Eight Tigers, he had a grudge against Liu Jin, who planned to send him to Nanjing. The two confronted each other in front of the emperor. Zhang Yong physically assaulted Liu Jin, prompting Emperor Wu to have Gu Dayong and others host a banquet to mediate. When Prince Anhua rebelled, Emperor Wu dispatched Yang Yiqing to oversee Ningxia and Yansui, with Zhang Yong appointed as Yang Yiqing's military supervisor. Soon, Liu Jin was captured by Yang Yiqing, and Zhang Yong took the opportunity to report Liu Jin's crimes to Emperor Wu during the presentation of the captured. Emperor Wu ordered Zhang Yong to lead the imperial guards to arrest Liu Jin, who was ultimately executed.
+
+In the fourteenth year of the Zhengde era (Year 1519), Prince Ning conspired to rebel, and Emperor Wu personally led an expedition, ordering Zhang Yong to lead two thousand border troops as the vanguard. Wang Shouren captured Prince Ning and handed him over to Zhang Yong. Jiang Bin attempted to falsely accuse Wang Shouren of conspiracy, but Zhang Yong intervened and saved him from punishment. After Emperor Shizong ascended the throne, the Eight Tigers faced setbacks. Censor Xiao Huai impeached Gu Dayong, Qiu Ju, and others for misleading the previous emperor, implicating Zhang Yong as well. Emperor Shizong issued an edict to have Zhang Yong live in seclusion. Xiao Huai further accused Zhang Yong of illegal activities in Jiangxi, demoting him to a ceremonial position at Xiaoling to oversee incense offerings. In the fifth year of the Jiajing era, he was recalled to the capital. In the sixth year of Jiajing, he became the chief eunuch in charge of the imperial seals. In the eighth year of Jiajing (Year 1529), Grand Scholar Yang Yiqing and others argued that Zhang Yong had indeed contributed, thus reinstating him to manage the imperial eunuch office and oversee the military camps. He soon passed away.","The biography explicitly states the individual's name as Zhang Yong, detailing his life as a eunuch in the court during the reign of Emperor Wu, his conflicts, military roles, and eventual rise and fall in status."
