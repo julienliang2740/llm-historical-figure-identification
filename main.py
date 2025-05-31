@@ -71,7 +71,8 @@ def process_row(row: Dict[str, str]) -> Dict[str, str]:
                         return row
                     crawled_text = crawl_link(row["know_by_bio_link"].strip())
                     row["know_by_bio_summary"] = crawled_text.replace('\n',' ')
-                row["know_by_bio_summary_anonymized"] = run_api(anonymize_biography_prompt, row["know_by_bio_summary"], "anonymize_biography")
+                anonymized_bio =  run_api(anonymize_biography_prompt, row["know_by_bio_summary"], "anonymize_biography")
+                row["know_by_bio_summary_anonymized"] = anonymized_bio.replace('\n',' ')
 
             user_prompt = row["know_by_bio_summary_anonymized"]
             result_dict = run_api(know_by_bio_prompt, user_prompt, "know_by_bio")
@@ -130,9 +131,9 @@ if __name__ == "__main__":
         process_csv_lines(input_csv, output_csv)
         print("Finished.")
 
-    if True:
+    if False:
         # Debug usage:
-        debug_csv = "./data/people_output_trunc.csv"
+        debug_csv = "./data/batch1_output3.csv"
         line_number = 2
         print(f"Printing: {debug_csv} - line {line_number}")
         print_csv_line_from_file(debug_csv, line_number)
