@@ -101,10 +101,10 @@ def crawl_link(url):
     crawl_result = ""
     if "wikipedia.org" in url:
         crawl_result = crawl_wikipedia_summary(url)
-        if (len(crawl_result) < 3000):
+        if (len(crawl_result) < 1000):
             crawl_result = crawl_wikipedia(url)
-            if len(crawl_result) > 10000:
-                crawl_result = crawl_result[:10000]
+            if len(crawl_result) > 6000:
+                crawl_result = crawl_result[:6000]
     else:
         crawl_result = generic_scrape(url)
     return crawl_result

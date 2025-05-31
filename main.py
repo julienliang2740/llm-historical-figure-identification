@@ -17,7 +17,7 @@ know_by_bio_reasoning: text -> Brief reasoning the llm gives for why they think 
 """
 
 know_by_name_test = True
-know_by_bio_test = False
+know_by_bio_test = True
 
 # debug function for printing out a line
 def print_csv_line_from_file(filename, line_number, has_headers=False):
@@ -125,7 +125,7 @@ if __name__ == "__main__":
     if True:
         # Example usage:
         input_csv = "./data/batch1.csv"
-        output_csv = "./data/batch1_output2.csv"
+        output_csv = "./data/batch1_output3.csv"
         print(f"Processing '{input_csv}' → '{output_csv}' …")
         process_csv_lines(input_csv, output_csv)
         print("Finished.")

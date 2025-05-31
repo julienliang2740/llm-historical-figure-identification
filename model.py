@@ -30,18 +30,18 @@ If you do not recognize the person, just say no.
 """
 
 know_by_bio_prompt = """
-You will be given an anonymized biography/summary of an individual where all the names and times are fake. Identify the name of the person who you think this is, and provide a brief reasoning.
+You will be given an anonymized summary of an individual where all the names and times are fake. Identify the name of the person who you think this is, and provide a brief reasoning.
 Do not attempt to use any of the names, times, locations, etc as references as they have all been anonymized.
 You are to guess who this person are purely based on the actions they took and their general life story provided.
 """
 
 anonymize_biography_prompt = """
-Anonymize the biography below. Change all the names of people, places, and more into fake names. Do not have any proper nouns, or even the real geographic names. Also change the year/times to fake times.
+Anonymize the summary below. Change all the names of people, places, and more into fake names. Do not have any proper nouns, or even the real geographic names. Also change the year/times to fake times.
 
 Your final output must be in English.
 
-Return only the anonymized biography and nothing else.
-DO NOT HAVE ANY NAMES OR ANYTHING REMOTELY CLOSE TO THE NAMES APPEAR IN THE ANONYMIZED BIOGRAPHY YOU GIVE. EVERY NAME AND PROPER NOUN MUST BE COMPLETELY UNRECOGNIZABLE.
+Return only the anonymized summary and nothing else.
+DO NOT HAVE ANY NAMES OR ANYTHING REMOTELY CLOSE TO THE NAMES APPEAR IN THE ANONYMIZED SUMMARY YOU GIVE. EVERY NAME AND PROPER NOUN MUST BE COMPLETELY UNRECOGNIZABLE.
 Avoid specific times and make the names of people, locations, etc as random and unrecognizable as possible.
 """
 
