@@ -31,30 +31,36 @@ If you do not recognize the person, just say no.
 
 know_by_bio_prompt = """
 You will be given an anonymized biography/summary of an individual where all the names and times are fake. Identify the name of the person who you think this is, and provide a brief reasoning.
+Do not attempt to use any of the names, times, locations, etc as references as they have all been anonymized.
+You are to guess who this person are purely based on the actions they took and their general life story provided.
 """
 
 anonymize_biography_prompt = """
 Anonymize the biography below. Change all the names of people, places, and more into fake names. Do not have any proper nouns, or even the real geographic names. Also change the year/times to fake times.
-Translate into English if the biography given is not in English.
+
+Your final output must be in English.
+
 Return only the anonymized biography and nothing else.
+DO NOT HAVE ANY NAMES OR ANYTHING REMOTELY CLOSE TO THE NAMES APPEAR IN THE ANONYMIZED BIOGRAPHY YOU GIVE. EVERY NAME AND PROPER NOUN MUST BE COMPLETELY UNRECOGNIZABLE.
+Avoid specific times and make the names of people, locations, etc as random and unrecognizable as possible.
 """
 
 
 
-def run_api(system_prompt, user_prompt, call_purpose, model="gpt-4o-mini"):
+def run_api(system_prompt, user_prompt, call_purpose, model="gpt-4o"):
     # for now we only have gpt
     response = ""
 
     if call_purpose == "know_by_name":
-        response = run_gpt(system_prompt, user_prompt, KnowByNameFormat, model)
+        response = run_gpt(system_prompt, system_prompt + user_prompt, KnowByNameFormat, model)
     elif call_purpose == "know_by_bio":
-        response = run_gpt(system_prompt, user_prompt, KnowByBio, model)
+        response = run_gpt(system_prompt, system_prompt + user_prompt, KnowByBio, model)
     elif call_purpose == "anonymize_biography":
-        response = run_gpt_unformatted(system_prompt, user_prompt, model)
+        response = run_gpt_unformatted(system_prompt, system_prompt + user_prompt, model)
 
     return response
 
-def run_gpt(system_prompt, user_prompt, format, model="gpt-4o-mini", temperature: float = 0):
+def run_gpt(system_prompt, user_prompt, format, model="gpt-4o", temperature: float = 0):
     open_ai_key = os.environ["OPENAI_API_KEY"]
     client = OpenAI(api_key=open_ai_key)
 
@@ -73,7 +79,7 @@ def run_gpt(system_prompt, user_prompt, format, model="gpt-4o-mini", temperature
 
     return resp_formatted
 
-def run_gpt_unformatted(system_prompt, user_prompt, model="gpt-4o-mini", temperature: float = 0):
+def run_gpt_unformatted(system_prompt, user_prompt, model="gpt-4o", temperature: float = 0):
     open_ai_key = os.environ["OPENAI_API_KEY"]
     client = OpenAI(api_key=open_ai_key)
 

@@ -19,50 +19,66 @@ know_by_bio_reasoning: text -> Brief reasoning the llm gives for why they think 
 know_by_name_test = True
 know_by_bio_test = False
 
+# debug function for printing out a line
+def print_csv_line_from_file(filename, line_number, has_headers=False):
+    with open(filename, 'r', newline='') as file:
+        reader = csv.reader(file)
+        rows = list(reader)
+
+        if line_number < 1 or line_number > len(rows):
+            print(f"Line number {line_number} is out of range. File has {len(rows)} lines.")
+            return
+
+        if has_headers:
+            headers = rows[0]
+            data_row = rows[line_number]
+            print(f"\nLine {line_number}:")
+            for header, value in zip(headers, data_row):
+                print(f"{header}: {value}")
+        else:
+            data_row = rows[line_number - 1]
+            print(f"\nLine {line_number}:")
+            for index, value in enumerate(data_row):
+                print(f"Column {index}: {value}")
+
 def process_row(row: Dict[str, str]) -> Dict[str, str]:
-    # """
-    # Stub function that takes in one CSV row (as a dict) and returns an updated dict.
-    # Modify this function to “do stuff” on each line.
-
-    # Example modifications shown below; feel free to replace with your own logic.
-    # """
-    # # EXAMPLE: If “know_by_name” is empty, fill in a default:
-    # if not row["know_by_name"].strip():
-    #     row["know_by_name"] = "UNKNOWN"
-
-    # # EXAMPLE: Append “ (reviewed)” to the summary column
-    # row["know_by_bio_summary"] = row["know_by_bio_summary"] + " (reviewed)"
-
-    # # EXAMPLE: If the name column contains lowercase, convert to title-case
-    # row["name"] = row["name"].strip().title()
-
-    # # EXAMPLE: If a link is missing, set a placeholder URL
-    # if not row["know_by_bio_link"].startswith("http"):
-    #     row["know_by_bio_link"] = "https://example.com/no-link"
-
-    # # …any other “per-row” logic goes here…
-
-    # return row
-
-
-
     # first check if there's even a name, if now just return and call it a day
-    if not row["name"].strip():
+    if row["name"].strip() == "":
         return row
 
     # RECOGNITION TEST ONE know_by_name_test
     # headers affected: know_by_name,know_by_name_description
     if know_by_name_test:
-        if not row["know_by_name"].strip():
+        if row["know_by_name"].strip() == "":
+            print(f"{row["name"]}: conducting know_by_name_test")
             user_prompt = row["name"]
             result_dict = run_api(know_by_name_prompt, user_prompt, "know_by_name")
             row["know_by_name"] = result_dict["recognize"]
             row["know_by_name_description"] = result_dict["description"]
+        else:
+            print("RECOGNITION TEST ONE FILLED IN")
 
     # RECOGNITION TEST TWO know_by_bio_test
     #  headers affected: know_by_bio, know_by_bio_link, know_by_bio_summary, know_by_bio_summary_anonymized, know_by_bio_reasoning
     if know_by_bio_test:
-        pass
+        if row["know_by_bio"].strip() == "":
+            print("MONKE BRUGA PROCEEDING")
+            if row["know_by_bio_summary_anonymized"].strip() == "":
+                if row["know_by_bio_summary"].strip() == "":
+                    if row["know_by_bio_link"].strip() == "":
+                        print("NO LINK TO GET")
+                        print(row)
+                        return row
+                    crawled_text = crawl_link(row["know_by_bio_link"].strip())
+                    row["know_by_bio_summary"] = crawled_text.replace('\n',' ')
+                row["know_by_bio_summary_anonymized"] = run_api(anonymize_biography_prompt, row["know_by_bio_summary"], "anonymize_biography")
+
+            user_prompt = row["know_by_bio_summary_anonymized"]
+            result_dict = run_api(know_by_bio_prompt, user_prompt, "know_by_bio")
+            row["know_by_bio"] = result_dict["name_guess"]
+            row["know_by_bio_reasoning"] = result_dict["reasoning"].replace('\n',' ')
+        else:
+            print("RECOGNITION TEST TWO FILLED IN")
 
     print(row)
     return row
@@ -106,9 +122,21 @@ def process_csv_lines(input_filename: str, output_filename: str) -> None:
 
 
 if __name__ == "__main__":
-    # Example usage:
-    input_csv = "people_trunc.csv"
-    output_csv = "people_output_trunc.csv"
-    print(f"Processing '{input_csv}' → '{output_csv}' …")
-    process_csv_lines(input_csv, output_csv)
-    print("Finished.")
+    if True:
+        # Example usage:
+        input_csv = "batch1.csv"
+        output_csv = "batch1_output.csv"
+        print(f"Processing '{input_csv}' → '{output_csv}' …")
+        process_csv_lines(input_csv, output_csv)
+        print("Finished.")
+
+    if True:
+        # Debug usage:
+        debug_csv = "people_output_trunc.csv"
+        line_number = 2
+        print(f"Printing: {debug_csv} - line {line_number}")
+        print_csv_line_from_file(debug_csv, line_number)
+        line_number = 3
+        print(f"Printing: {debug_csv} - line {line_number}")
+        print_csv_line_from_file(debug_csv, line_number)
+

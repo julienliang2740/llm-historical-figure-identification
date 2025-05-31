@@ -119,6 +119,8 @@ if __name__ == '__main__':
     # url = "https://en.wikipedia.org/wiki/Sir_William_Molesworth,_8th_Baronet"
     # url = "https://en.wikipedia.org/wiki/Edwin_Freiherr_von_Manteuffel"
 
+    url = "https://zh.wikipedia.org/wiki/%E5%BC%A0%E6%B0%B8_(%E6%98%8E%E6%9C%9D%E5%AE%A6%E5%AE%98)"
+
     try:
         text_data = crawl_link(url)
         print("\n--- Extracted Article Text ---\n")
