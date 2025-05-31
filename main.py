@@ -124,15 +124,15 @@ def process_csv_lines(input_filename: str, output_filename: str) -> None:
 if __name__ == "__main__":
     if True:
         # Example usage:
-        input_csv = "batch1.csv"
-        output_csv = "batch1_output.csv"
+        input_csv = "./data/batch1.csv"
+        output_csv = "./data/batch1_output2.csv"
         print(f"Processing '{input_csv}' → '{output_csv}' …")
         process_csv_lines(input_csv, output_csv)
         print("Finished.")
 
     if True:
         # Debug usage:
-        debug_csv = "people_output_trunc.csv"
+        debug_csv = "./data/people_output_trunc.csv"
         line_number = 2
         print(f"Printing: {debug_csv} - line {line_number}")
         print_csv_line_from_file(debug_csv, line_number)
